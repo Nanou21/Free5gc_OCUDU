@@ -16,7 +16,7 @@ UE2 ---- O-DU2 ----/
 
 The SMF controls UPF1 and UPF2 through **N4/PFCP**. The O-CU connects to the AMF through **N2** and to UPF1 through **N3**.
 
-![5G SA Testbed Architecture](figures/architecture.png)
+![5G SA Testbed Architecture](architecture.png)
 
 ---
 
