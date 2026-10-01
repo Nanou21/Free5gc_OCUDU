@@ -23,9 +23,9 @@ The SMF controls UPF1 and UPF2 through **N4/PFCP**. The O-CU connects to the AMF
 | SDR 2 | USRP B210 connected to O-DU2 |
 | UE1 | Samsung Galaxy 26, served by O-DU1 / PCI 1 |
 | UE2 | Samsung Galaxy 26, served by O-DU2 / PCI 2 |
-| Core/CU OS | Ubuntu — **version to be confirmed from the physical host** |
-| DU1 OS | Ubuntu — **version to be confirmed from the physical host** |
-| DU2 OS | Ubuntu — **version to be confirmed from the physical host** |
+| Core/CU OS | Ubuntu — Ubuntu 24.04.5 LTS |
+| DU1 OS | Ubuntu — Ubuntu 24.04.5 LTS |
+| DU2 OS | Ubuntu — Ubuntu 24.04.5 LTS |
 | Core | free5GC |
 | RAN | OCUDU |
 | SDR driver | UHD |
