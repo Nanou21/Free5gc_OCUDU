@@ -6,14 +6,6 @@ This repository documents a physical **5G Standalone (SA) testbed** integrating 
 
 The testbed uses two **Samsung Galaxy 26** COTS UEs, two USRP B210 radio branches, a shared O-CU, and two UPFs connected through **N9**.
 
-```text
-UE1 ---- O-DU1 ----\
-                    \
-                     O-CU ---- UPF1 ---- N9 ---- UPF2 ---- DN / Internet
-                    /
-UE2 ---- O-DU2 ----/
-```
-
 The SMF controls UPF1 and UPF2 through **N4/PFCP**. The O-CU connects to the AMF through **N2** and to UPF1 through **N3**.
 
 ![5G SA Testbed Architecture](architecture.png)
