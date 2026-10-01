@@ -1,0 +1,59 @@
+# SPDX-FileCopyrightText: Copyright (C) 2021-2026 Software Radio Systems Limited
+# SPDX-License-Identifier: BSD-3-Clause-Open-MPI
+
+
+# Example config for a locally deployed CU listening on the localhost interface for a DU connection
+ran_node_name: gnb01
+gnb_id: 411
+gnb_id_bit_length: 22
+gnb_cu_up_id: 0
+
+cu_cp:
+  max_nof_dus: 6                         # Optional UINT (6). Sets the maximum number of DU connections that the CU-CP may accept.
+  max_nof_cu_ups: 6                      # Optional UINT (6). Sets the maximum number of CU-UP connections that the CU-CP may accept.
+  max_nof_ues: 8192                      # Optional UINT (8192). Sets the maximum number of UEs that the CU-CP may accept.
+  max_nof_drbs_per_ue: 8                 # Optional UINT (8). Sets the maximum number of DRBs per UE. Supported: [1 - 29].
+  inactivity_timer: 120                  # Optional INT (120). Sets the UE/PDU Session/DRB inactivity timer in seconds. Supported: [1 - 7200].
+  request_pdu_session_timeout: 120        # Optional INT (3). Timeout for the setup of a PDU session after an InitialUeMessage was sent to the core, in seconds. The timeout must be larger
+                                         # than T310. If the value is reached, the UE will be released.
+  enable_rrc_inactive: false             # Optional BOOLEAN (false). Enables the RRC INACTIVE state for UEs. Supported: [false, true].
+  ran_paging_cycle: 32                   # Optional UINT (32). Set
+  t380: 10  
+  
+  amf:
+    addr: 192.168.56.4
+    bind_addr: 192.168.56.7
+    supported_tracking_areas:
+      - tac: 7
+        plmn_list:
+          - plmn: "00101"
+            tai_slice_support_list:
+              - sst: 1
+                sd: 1122867
+              - sst: 1
+              
+  f1ap:
+    bind_addr: 192.168.56.7
+
+cu_up:
+  f1u:
+    socket:
+      - bind_addr: 192.168.56.7
+      
+  ngu:
+    socket:
+      - bind_addr: 192.168.56.8
+
+log:
+  filename: /tmp/cu.log
+  all_level: warning
+
+pcap:
+  ngap_enable: false
+  ngap_filename: /tmp/cu_ngap.pcap
+  f1ap_enable: false
+  f1ap_filename: /tmp/cu_f1ap.pcap
+  f1u_enable: false
+  f1u_filename: /tmp/cu_f1u.pcap
+  n3_enable: false
+  n3_filename: /tmp/cu_n3.pcap
