@@ -547,7 +547,3 @@ Important issues encountered during testbed development included:
 
 ---
 
-
-## Security Note
-
-Do not commit subscriber authentication keys, OP/OPc values, private keys, certificates, GitHub tokens, or other credentials to a public repository.
