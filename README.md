@@ -345,7 +345,7 @@ sudo bash start_services.sh
 The O-CU has its own directory. On the O-CU host, enter the CU folder first, then start it with the CU configuration:
 
 ```bash
-cd CU
+cd ocudu/build/apps/cu
 sudo ./ocu -c cu.yml
 ```
 
@@ -354,7 +354,7 @@ sudo ./ocu -c cu.yml
 Both O-DU configurations are stored in the same `DU` directory. On the DU1 host:
 
 ```bash
-cd du
+cd ocudu/build/apps/du
 sudo ./odu -c du1.yml
 ```
 
@@ -379,7 +379,7 @@ The preliminary observed throughput was approximately:
 On the DU2 host, enter the same `DU` directory and start the second DU with its own configuration:
 
 ```bash
-cd du
+cd ocudu/build/apps/du
 sudo ./odu -c du2.yml
 ```
 
