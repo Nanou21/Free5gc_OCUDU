@@ -1,0 +1,33 @@
+version: 1.0.3
+description: N9-SDN-RAAS - Distributed UPF2
+
+# N4 - PFCP Control Plane
+pfcp:
+  addr: 192.168.200.52
+  nodeID: 192.168.200.52
+  retransTimeout: 1s
+  maxRetrans: 3
+
+# N3 and N9 - GTP-U User Plane
+gtpu:
+  forwarder: gtp5g
+  ifList:
+    # N3 towards UERANSIM2 / gNB2
+    - addr: 10.3.2.52
+      type: N3
+      ifname: upfgtp
+
+    # N9 towards UPF1 via GNS3/OVS
+    - addr: 10.9.2.52
+      type: N9
+
+# Supported Data Network
+dnnList:
+  - dnn: internet
+    cidr: 10.60.0.0/16
+
+# Logging
+logger:
+  enable: true
+  level: info
+  reportCaller: false
