@@ -1,0 +1,22 @@
+info:
+  version: 1.0.7
+  description: N9-SDN-RAAS per-UE routing
+
+ueRoutingInfo:
+  UE1:
+    members:
+      - imsi-208930000000001
+    topology:
+      - A: gNB1
+        B: UPF1
+
+  UE2:
+    members:
+      - imsi-208930000000002
+    topology:
+      - A: gNB2
+        B: UPF2
+
+routeProfile: {}
+
+pfdDataForApp: []
